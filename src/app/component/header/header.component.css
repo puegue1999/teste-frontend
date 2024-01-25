@@ -4,10 +4,10 @@
     align-items: center;
     background-color: black;
     padding: 3em 0;
-}
 
-.logo {
-    height: 6em;
+    img {
+        height: 6em;
+    }
 }
 
 .div-main-header {
