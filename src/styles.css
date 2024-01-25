@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    font-family: 'Gothan', sans-serif;
+}
+
+@font-face {
+    font-family: 'Gothan';
+    src: url('./assets/fonts/gotham-black.woff2') format('woff2'),
+        url('./assets/fonts/gotham-bold.woff2') format('woff2'),
+        url('./assets/fonts/gotham-book.woff2') format('woff2'),
+        url('./assets/fonts/gotham-light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
