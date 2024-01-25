@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './form.component.css'
 })
 export class FormComponent {
-
+  manha: boolean = false;
 }
