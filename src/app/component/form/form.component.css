@@ -1,0 +1,40 @@
+.card-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 2em 6em;
+    padding: 2em;
+    border-radius: 10px;
+    border: 2px solid #808080;
+    border-bottom: 3px solid #808080;
+}
+
+.div-horario {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+        height: 2em;
+    }
+
+    label {
+        padding: 0 0.5em;
+        color: #808080;
+    }
+}
+
+.div-pergunta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #808080;
+    
+    label {
+        padding: 1em;
+        color: #808080;
+        font-size: 1.5em;
+    }
+}
