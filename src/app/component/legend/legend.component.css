@@ -1,0 +1,43 @@
+.div-card-legend {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #b9b9b9;
+    margin: 2em 6em;
+    padding: 2em;
+}
+
+.div-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-imagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.5em;
+
+    img {
+        height: 6em;
+    }
+
+    label {
+        color: #808080;
+    }
+}
+
+.titulo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333333;
+}
