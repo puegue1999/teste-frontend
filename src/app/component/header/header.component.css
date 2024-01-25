@@ -34,3 +34,17 @@
     font-size: 1em;
     margin: 3em 0 0 0;
 }
+
+@media screen and (max-width: 768px) {
+    .div-title {
+        padding: 2em 0;
+    
+        img {
+            height: 5em;
+        }
+    }
+    
+    .div-main-header {
+        padding: 2em;
+    }
+}
