@@ -1,0 +1,36 @@
+.div-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 3em 0;
+}
+
+.logo {
+    height: 6em;
+}
+
+.div-main-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3em;
+    color: #333333;
+}
+
+.title-header {
+    font-size: 2.5em;
+    margin: 0.2em 0;
+}
+
+.separador {
+    background-color: #333333;
+    height: 1em;
+    width: 9em;
+}
+
+.subtitle-header {
+    font-size: 1em;
+    margin: 3em 0 0 0;
+}
