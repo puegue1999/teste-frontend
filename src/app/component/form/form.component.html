@@ -6,9 +6,41 @@
     <div class="div-pergunta">
         <label>Qual o período quer treinar?</label>
     </div>
-    <div>
-        <div>
-            <input type="checkbox" [(ngModel)]="manha">
+    <div class="div-turnos">
+        <div class="div-turno">
+            <div class="div-checkbox">
+                <input type="checkbox" id="manha" name="manha">
+                <label>Manhã</label>
+            </div>
+            <label>06:00 às 12:00</label>
         </div>
+        <div class="div-turno">
+            <div class="div-checkbox">
+                <input type="checkbox" id="tarde" name="tarde">
+                <label>Tarde</label>
+            </div>
+            <label>12:01 às 18:00</label>
+        </div>
+        <div class="div-turno">
+            <div class="div-checkbox">
+                <input type="checkbox" id="noite" name="noite">
+                <label>Noite</label>
+            </div>
+            <label>18:01 às 23:00</label>
+        </div>
+    </div>
+    <div class="div-linha">
+        <div class="div-fechadas">
+            <input type="checkbox" id="fechadas" name="fechadas">
+            <label>Exibir unidades fechadas</label>
+        </div>
+        <div>
+            <label>Resultados encontrados: </label>
+            <label>0</label>
+        </div>
+    </div>
+    <div class="div-botoes">
+        <button class="botao-principal">ENCONTRAR UNIDADE</button>
+        <button class="botao-secundario">LIMPAR</button>
     </div>
 </div>

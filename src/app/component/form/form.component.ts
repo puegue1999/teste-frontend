@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class FormComponent {
   manha: boolean = false;
+
+  onCheckboxChange(event: Event) {
+    this.manha = (event.target as HTMLInputElement).checked;
+  }
 }
