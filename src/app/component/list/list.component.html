@@ -1,1 +1,14 @@
-<p>list works!</p>
+<div class="div-list">
+    <div *ngFor="let dado of dadosSorted; let i = index">
+        <div class="div-list-card">
+            <div *ngIf="dado.opened">
+                <label>Aberto</label>
+                <label>{{ dado.content | json }}</label>
+            </div>
+            <div *ngElse>
+                <label>Fechado</label>
+                <label>{{ dado.content | json }}</label>
+            </div>
+        </div>
+    </div>
+</div>
