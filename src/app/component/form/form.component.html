@@ -36,11 +36,11 @@
         </div>
         <div>
             <label>Resultados encontrados: </label>
-            <label>0</label>
+            <label *ngIf="dados">{{ dados.total | json }}</label>
         </div>
     </div>
     <div class="div-botoes">
-        <button class="botao-principal">ENCONTRAR UNIDADE</button>
+        <button class="botao-principal" (click)="emitirEventoFazerGet()" >ENCONTRAR UNIDADE</button>
         <button class="botao-secundario">LIMPAR</button>
     </div>
 </div>

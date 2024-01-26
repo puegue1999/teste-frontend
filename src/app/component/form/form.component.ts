@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './form.component.css'
 })
 export class FormComponent {
-  manha: boolean = false;
+  @Input() dados: any;
+  @Output() fazerGet = new EventEmitter<any>();
 
-  onCheckboxChange(event: Event) {
-    this.manha = (event.target as HTMLInputElement).checked;
+  emitirEventoFazerGet(): void {
+    this.fazerGet.emit();
   }
 }
