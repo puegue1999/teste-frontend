@@ -1,3 +1,4 @@
 <app-header></app-header>
-<app-form></app-form>
+<app-form [dados]="dadosApi" (fazerGet)="chamadaApi()"></app-form>
 <app-legend></app-legend>
+<app-list [dados]="dadosApi?.locations"></app-list>
