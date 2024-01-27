@@ -1,4 +1,9 @@
 <app-header></app-header>
-<app-form [dados]="dadosApi" (fazerGet)="chamadaApi()"></app-form>
-<app-legend></app-legend>
-<app-list [dados]="dadosApi?.locations"></app-list>
+<div class="home">
+    <div class="container-principal">
+        <app-form [dados]="dadosApi" [fechadas]="fechadas" [total]="total" (fazerGet)="chamadaFazerFiltro($event)"></app-form>
+        <app-legend></app-legend>
+        <app-list [dados]="locations" [filtro]="horario" [fechadas]="fechadas" [pagina]="paginaAtual" (mudarPagina)="mudarPagina($event)" ></app-list>
+    </div>
+</div>
+<app-footer></app-footer>

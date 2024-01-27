@@ -1,0 +1,17 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container-principal {
+    max-width: 78%;
+}
+
+@media screen and (max-width: 769px) {
+    .container-principal {
+        max-width: 100%;
+    }
+}
