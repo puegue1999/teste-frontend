@@ -1,27 +1,46 @@
-# Testefrontend
+# Esse é um teste feito para a Artemis Corporation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+## Formas de compilação usando o teminal:
 
-## Development server
+> Execute: npm install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+> Execute: ng serve
 
-## Code scaffolding
+## Elementos no código:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Header
 
-## Build
+> Aqui foi feita apenas a colocação simples da logo e um card para destacá-la;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Form
 
-## Running unit tests
+> No form é mostrado as horas que poderão ser filtradas e se quiser exibir apenas as unidades fechadas;
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> Apenas uma hora pode ser escolhida por vez;
 
-## Running end-to-end tests
+### Legend
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+> Aqui mostra a legenda das imagens mostradas em cada unidade para a facilidade de visualização do usuário;
 
-## Further help
+### List
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+> A listagem das unidades filtradas ou não pelo usuário.
+
+> Fiz uma limitação para mostrar apenas quatro elementos por vez quando estiver em desktop e apenas um item por vez quando estiver no mobile.
+
+> Exite também um método de paginação simples para o usuário usar;
+
+### Footer
+
+> Assim como a header, foi feito algo simples, apenas a chamada da imagem e um card no fundo;
+
+## Maiores desafios:
+
+> A API que foi dada acabou sendo um grande desafio de ser usada por vários motivos:
+>> A lista que era trazida possuía diferentes estruturas e graças a isso vários erros ocorreram até eu perceber isso;
+>> A filtragem precisava ser efeita a partir de uma string e transformar as horas de texto para inteiro para só assim filtrar foi um desafio que custou certo tempo;
+>> Mesmo tentando contornar a listagem diferente para cada elemento, algumas vezes ainda ocorria alguns bugs, pois alguns elementos se distanciavam do padrão já pré-estabelecido;
+
+## Sobre a falta de um back-end:
+
+> Como a API dada custou muito tempo, sobrou pouco tempo hábil para criar um back-end decente, além que precisaria ter que ajustá-lo na api já dada e das criações de tela para a adição e remoção das unidades. O que foi preferivel focar no front-end com o que já possuía e mostrar um projeto entregável.
