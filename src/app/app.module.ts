@@ -8,6 +8,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { FormComponent } from './component/form/form.component';
 import { LegendComponent } from './component/legend/legend.component';
 import { ListComponent } from './component/list/list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,12 @@ import { ListComponent } from './component/list/list.component';
     FooterComponent,
     FormComponent,
     LegendComponent,
-    ListComponent
+    ListComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
