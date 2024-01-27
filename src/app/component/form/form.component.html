@@ -1,3 +1,9 @@
+<div class="div-main-header">
+    <label class="title-header">REABERTURA</label>
+    <label class="title-header">SMART FIT</label>
+    <div class="separador"></div>
+    <label class="subtitle-header">O horário de funcionamento das nossas unidades está conseguindo os decretos de cada município. Por isso, confira aqui se a sua unidade está aberta e as medidas de segurança que estamos seguindo.</label>
+</div>
 <div class="card-form">
     <div class="div-horario">
         <img src="/assets/images/icon-hour.png" alt="hour">
@@ -9,21 +15,21 @@
     <div class="div-turnos">
         <div class="div-turno">
             <div class="div-checkbox">
-                <input type="checkbox" id="manha" name="manha">
+                <input type="checkbox" id="manha" name="manha" [checked]="selecionado === 'manha'" (change)="selecionarOpcao('manha')">
                 <label>Manhã</label>
             </div>
             <label>06:00 às 12:00</label>
         </div>
         <div class="div-turno">
             <div class="div-checkbox">
-                <input type="checkbox" id="tarde" name="tarde">
+                <input type="checkbox" id="tarde" name="tarde" [checked]="selecionado === 'tarde'" (change)="selecionarOpcao('tarde')">
                 <label>Tarde</label>
             </div>
             <label>12:01 às 18:00</label>
         </div>
         <div class="div-turno">
             <div class="div-checkbox">
-                <input type="checkbox" id="noite" name="noite">
+                <input type="checkbox" id="noite" name="noite" [checked]="selecionado === 'noite'" (change)="selecionarOpcao('noite')">
                 <label>Noite</label>
             </div>
             <label>18:01 às 23:00</label>
@@ -31,16 +37,16 @@
     </div>
     <div class="div-linha">
         <div class="div-fechadas">
-            <input type="checkbox" id="fechadas" name="fechadas">
+            <input type="checkbox" id="fechadas" name="fechadas" [(ngModel)]="fechadas">
             <label>Exibir unidades fechadas</label>
         </div>
         <div>
             <label>Resultados encontrados: </label>
-            <label *ngIf="dados">{{ dados.total | json }}</label>
+            <label *ngIf="dados">{{ total | json }}</label>
         </div>
     </div>
     <div class="div-botoes">
         <button class="botao-principal" (click)="emitirEventoFazerGet()" >ENCONTRAR UNIDADE</button>
-        <button class="botao-secundario">LIMPAR</button>
+        <button class="botao-secundario" (click)="limparGet()">LIMPAR</button>
     </div>
 </div>
