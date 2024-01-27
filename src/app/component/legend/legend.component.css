@@ -41,3 +41,17 @@
     font-size: 1.5em;
     color: #333333;
 }
+
+@media screen and (max-width: 769px) {
+    .div-card-legend {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 2em;
+        padding: 2em;
+    }
+    
+    .div-element {
+        margin: 1em;
+    }
+}
