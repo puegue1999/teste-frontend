@@ -38,7 +38,9 @@
 
 > A API que foi dada acabou sendo um grande desafio de ser usada por vários motivos:
 >> A lista que era trazida possuía diferentes estruturas e graças a isso vários erros ocorreram até eu perceber isso;
+
 >> A filtragem precisava ser efeita a partir de uma string e transformar as horas de texto para inteiro para só assim filtrar foi um desafio que custou certo tempo;
+
 >> Mesmo tentando contornar a listagem diferente para cada elemento, algumas vezes ainda ocorria alguns bugs, pois alguns elementos se distanciavam do padrão já pré-estabelecido;
 
 ## Sobre a falta de um back-end:
