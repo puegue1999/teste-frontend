@@ -1,13 +1,83 @@
-<div class="div-list">
-    <div *ngFor="let dado of dadosSorted; let i = index">
-        <div class="div-list-card">
-            <div *ngIf="dado.opened">
-                <label>Aberto</label>
-                <label>{{ dado.content | json }}</label>
+<div>
+    <div class="div-list">
+        <div *ngFor="let dado of itensNaPagina || []; let i = index">
+            <div class="div-list-card">
+                <div *ngIf="dado.opened === true" class="div-card">
+                    <div class="div-card-um">
+                        <label class="verde">Aberto</label>
+                        <label class="title">{{ dado.title }}</label>
+                        <label [innerHTML]="textoFormatado(dado.content)" class="content"></label>
+                    </div>
+                    <div class="div-card-dois">
+                        <div>
+                            <img *ngIf="dado.mask === 'required'" src="/assets/images/required-mask.png" alt="required-mask">
+                            <img *ngIf="dado.mask === 'recommended'" src="/assets/images/recommended-mask.png" alt="recommended-mask">
+                            <img *ngIf="dado.towel === 'required'" src="/assets/images/required-towel.png" alt="required-towel">
+                            <img *ngIf="dado.towel === 'recommended'" src="/assets/images/recommended-towel.png" alt="recommended-towel">
+                            <img *ngIf="dado.fountain === 'partial'" src="/assets/images/partial-fountain.png" alt="partial-fountain">
+                            <img *ngIf="dado.fountain === 'not_allowed'" src="/assets/images/forbidden-fountain.png" alt="forbidden-fountain">
+                            <img *ngIf="dado.locker_room === 'allowed'" src="/assets/images/required-lockerroom.png" alt="required-lockerroom">
+                            <img *ngIf="dado.locker_room === 'partial'" src="/assets/images/partial-lockerroom.png" alt="partial-lockerroom">
+                            <img *ngIf="dado.locker_room === 'closed'" src="/assets/images/forbidden-lockerroom.png" alt="forbidden-lockerroom">
+                        </div>
+                        <div>
+                            <div class="div-schedules">
+                                <div class="div-hour">
+                                    <label class="label-hour-title">{{ dado.schedules?.[0]?.weekdays }}</label>
+                                    <label class="label-hour-subtitle">{{ dado.schedules?.[0]?.hour }}</label>
+                                </div>
+                                <div class="div-hour">
+                                    <label class="label-hour-title">{{ dado.schedules?.[1]?.weekdays }}</label>
+                                    <label class="label-hour-subtitle">{{ dado.schedules?.[1]?.hour }}</label>
+                                </div>
+                            </div>
+                            <div class="div-schedules">
+                                <div class="div-hour">
+                                    <label class="label-hour-title">{{ dado.schedules?.[2]?.weekdays }}</label>
+                                    <label class="label-hour-subtitle">{{ dado.schedules?.[2]?.hour }}</label>
+                                </div>
+                                <div class="div-hour">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="dado.opened === false" class="div-card">
+                    <div class="div-card-um">
+                        <label class="vermelho">Fechado</label>
+                        <label class="title">{{ dado.title }}</label>
+                        <label [innerHTML]="textoFormatado(dado.content)" class="content"></label>
+                    </div>
+                    <div class="div-card-dois">
+    
+                    </div>
+                </div>
             </div>
-            <div *ngElse>
-                <label>Fechado</label>
-                <label>{{ dado.content | json }}</label>
+        </div>
+    </div>
+    <div class="div-pagination">
+        <div class="div-buttons">
+            <div class="div-button">
+                <button class="button-setas" (click)="eventMudarPagina(pagina-1)" *ngIf="pagina > 0"><</button>
+            </div>
+            <div class="div-button" *ngIf="desktop" >
+                <button class="button-terciario" (click)="eventMudarPagina(pagina-2)" *ngIf="pagina-1 > 0" >{{ pagina-1 }}</button>
+            </div>
+            <div class="div-button" *ngIf="desktop">
+                <button class="button-secundario" (click)="eventMudarPagina(pagina-1)" *ngIf="pagina > 0" >{{ pagina }}</button>
+            </div>
+            <div class="div-button">
+                <button class="button-central">{{ pagina+1 }}</button>
+            </div>
+            <div class="div-button" *ngIf="desktop">
+                <button class="button-secundario" (click)="eventMudarPagina(pagina+1)" *ngIf="pagina < total-1" >{{ pagina+2 }}</button>
+            </div>
+            <div class="div-button" *ngIf="desktop">
+                <button class="button-terciario" (click)="eventMudarPagina(pagina+2)" *ngIf="pagina < total-2" >{{ pagina+3 }}</button>
+            </div>
+            <div class="div-button">
+                <button class="button-setas" (click)="eventMudarPagina(pagina+1)" *ngIf="pagina < total-1">></button>
             </div>
         </div>
     </div>

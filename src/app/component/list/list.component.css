@@ -1,13 +1,23 @@
 .div-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     margin: 2em 6em;
     padding: 2em;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.div-enquadramento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 80vw;
-    overflow: auto;
+    height: 100%;
+    padding: 1em;
 }
 
 .div-list-card {
@@ -20,5 +30,165 @@
     height: 23em;
     width: 20em;
     margin: 1em;
+    padding: 1em;
     box-shadow: 0px 0px 10px 0px #000;
+    scroll-snap-align: start;
+}
+
+.div-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.div-card-um {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 40%;
+}
+
+.verde {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #2FC022;
+}
+
+.vermelho {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #dc0a17;
+}
+
+.title {
+    font-size: 2em;
+    color: #333333;
+}
+
+.content {
+    color: #808080;
+}
+
+.div-schedules {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0.2em;
+}
+
+.div-card-dois {
+    height: 60%;
+    border-top: 2px solid #808080;
+    padding-top: 1em;
+
+    img {
+        height: 5em;
+    }
+}
+
+.div-legend-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.div-hour {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 50%;
+}
+
+.label-hour-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333333;
+}
+
+.label-hour-subtitle {
+    font-size: 1.1em;
+    color: #808080;
+}
+
+.div-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 2em;
+}
+
+.div-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color: #ebebeb;
+}
+
+.div-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5em;
+    height: 3.5em;
+    margin: 0.5em;
+    button {
+        font-size: 1.5em;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: #FFF;
+        border: 3px solid #FFB612;
+        color: #333333;
+    }
+}
+
+.div-buttons .button-central {
+    width: 100%;
+    height: 100%;
+    background-color: #FFB612;
+    border: none;
+}
+
+.div-buttons .button-secundario {
+    width: 80%;
+    height: 80%;
+    background-color: #333333;
+    color: #fff;
+}
+
+.div-buttons .button-terciario {
+    width: 70%;
+    height: 70%;
+    background-color: #333333;
+    color: #fff;
+}
+
+.div-buttons .button-setas {
+    width: 60%;
+    height: 60%;
+    border-radius: 20px;
+    background-color: #333333;
+    color: #fff;
+}
+
+@media screen and (max-width: 769px) {
+    .div-list {
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
 }
